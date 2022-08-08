@@ -27,16 +27,18 @@ class Lesson172Test {
 
     @Test
     void test2() {
-        System.setIn(new ByteArrayInputStream("1520\n8819".getBytes()));
+        String input = "1520" + System.lineSeparator() + "819";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
         Lesson172.main(null);
-        assertEquals("Write password\nWrite password", outputStreamCaptor.toString().trim());
+        assertEquals("Write password" + System.lineSeparator() + "Write password", outputStreamCaptor.toString().trim());
     }
 
     @Test
     void test3() {
-        System.setIn(new ByteArrayInputStream("2635\n8819".getBytes()));
+        String input = "2635" + System.lineSeparator() + "8819";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
         Lesson172.main(null);
-        assertEquals("Write password\nWrite password", outputStreamCaptor.toString().trim());
+        assertEquals("Write password" + System.lineSeparator() + "Write password", outputStreamCaptor.toString().trim());
     }
 
 }

@@ -29,7 +29,7 @@ class Lesson162Test {
     void test2() {
         System.setIn(new ByteArrayInputStream("3".getBytes()));
         Lesson162.main(null);
-        assertEquals("Welcome\nWelcome\nWelcome", outputStreamCaptor.toString().trim());
+        assertEquals("Welcome" + System.lineSeparator() + "Welcome" + System.lineSeparator() + "Welcome", outputStreamCaptor.toString().trim());
     }
 
     @Test

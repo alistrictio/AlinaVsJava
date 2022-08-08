@@ -22,21 +22,21 @@ class Lesson62Test {
     void test1() {
         System.setIn(new ByteArrayInputStream("5".getBytes()));
         Lesson62.main(null);
-        assertEquals("Round 1 results:\n6\n4", outputStreamCaptor.toString().trim());
+        assertEquals("Round 1 results:" + System.lineSeparator() + "6" + System.lineSeparator() + "4", outputStreamCaptor.toString().trim());
     }
 
     @Test
     void test2() {
         System.setIn(new ByteArrayInputStream("3".getBytes()));
         Lesson62.main(null);
-        assertEquals("Round 1 results:\n4\n2", outputStreamCaptor.toString().trim());
+        assertEquals("Round 1 results:" + System.lineSeparator() + "4" + System.lineSeparator() + "2", outputStreamCaptor.toString().trim());
     }
 
     @Test
     void test3() {
         System.setIn(new ByteArrayInputStream("1".getBytes()));
         Lesson62.main(null);
-        assertEquals("Round 1 results:\n2\n0", outputStreamCaptor.toString().trim());
+        assertEquals("Round 1 results:" + System.lineSeparator() + "2" + System.lineSeparator() + "0", outputStreamCaptor.toString().trim());
     }
 
 }

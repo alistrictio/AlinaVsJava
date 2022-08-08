@@ -36,7 +36,7 @@ class Lesson112Test {
     void test3() {
         System.setIn(new ByteArrayInputStream("38000".getBytes()));
         Lesson112.main(null);
-        assertEquals("Gift card\nGift card", outputStreamCaptor.toString().trim());
+        assertEquals("Gift card" + System.lineSeparator() + "Gift card", outputStreamCaptor.toString().trim());
     }
 
 }

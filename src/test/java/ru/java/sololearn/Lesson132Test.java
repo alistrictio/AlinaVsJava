@@ -20,21 +20,24 @@ class Lesson132Test {
 
     @Test
     void test1() {
-        System.setIn(new ByteArrayInputStream("15000\n9000".getBytes()));
+        String input = "15000" + System.lineSeparator() + "9000";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
         Lesson132.main(null);
         assertEquals("", outputStreamCaptor.toString().trim());
     }
 
     @Test
     void test2() {
-        System.setIn(new ByteArrayInputStream("8400\n9000".getBytes()));
+        String input = "8400" + System.lineSeparator() + "9000";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
         Lesson132.main(null);
         assertEquals("small country", outputStreamCaptor.toString().trim());
     }
 
     @Test
-    void test4() {
-        System.setIn(new ByteArrayInputStream("10000\n10000".getBytes()));
+    void test3() {
+        String input = "10000" + System.lineSeparator() + "10000";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
         Lesson132.main(null);
         assertEquals("", outputStreamCaptor.toString().trim());
     }

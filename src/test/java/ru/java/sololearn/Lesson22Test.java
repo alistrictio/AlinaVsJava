@@ -20,7 +20,7 @@ class Lesson22Test {
     @Test
     void test1() {
         Lesson22.main(null);
-        assertEquals("Name: Toyota\nEngine: 4.7\nYear: 2019", outputStreamCaptor.toString().trim());
+        assertEquals("Name: Toyota" + System.lineSeparator() + "Engine: 4.7" + System.lineSeparator() + "Year: 2019", outputStreamCaptor.toString().trim());
     }
 
 }
